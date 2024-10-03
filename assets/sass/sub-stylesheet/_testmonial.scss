@@ -6,11 +6,17 @@
             position: absolute;
             right: 0;
             img {
-                height: 600px; 
+                height: 850px; 
                 @include breakpoint(max-sm){
                     height: auto;
                     width: 100%;
-                }   
+                }  
+                @include breakpoint(max-xxl){
+                    height: 600px;
+                } 
+                @include breakpoint(max-sm){
+                    height: auto;
+                } 
             }
             @include breakpoint(max-xxl){
                 right: auto;
