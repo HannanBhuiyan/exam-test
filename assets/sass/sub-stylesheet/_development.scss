@@ -1,0 +1,136 @@
+/* @@@@@@@@@@@@@  development Section Start Here  @@@@@@@@@@@@@@ */
+.development-lifecycle {
+    background-color: $secondary-color;
+    position: relative;
+    .development-lifecycle__area {
+        .shape {
+            position: absolute;
+            bottom: 10%;
+            left: 4%;
+            img {
+                width: 100%;
+            }
+            @include breakpoint(max-xl) {
+                display: none; 
+            }
+        }
+        .development-lifecycle__title {
+            text-align: center;
+            padding: 120px 0px;
+            @include breakpoint(max-xl) {
+                padding-bottom: 50px;
+            }
+            @include breakpoint(max-xl) {
+                padding-bottom: 0;
+            }
+            .development-lifecycle__subtitle {
+                color: #515151;
+                font-size: 12px;
+                font-family: $poppins;
+                font-weight: 500;
+                position: relative;
+                display: inline-block;
+                background-color: $white;
+                @include box-shadow($box-shadow);
+                padding: 12px 60px;
+                border-radius: 8px;
+                margin-bottom: 15px;
+
+                &::after,
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &::after {
+                    content: url('../images/line-left.png');
+                    left: 15px;
+                }
+                
+                &::before {
+                    content: url('../images/line-right.png');
+                    right: 15px;
+                }
+               
+            }
+            .development-lifecycle__heading {
+                font-size: 60px;
+                color: $heading;
+                font-family: $public-sans;
+                font-weight: 800;
+                @include breakpoint(max-sm) {
+                    font-size: 40px;
+                }
+            }
+            .development-lifecycle__subheading {
+                color: $subheading;
+                font-size: 60px;
+                font-family: $public-sans;
+                @include breakpoint(max-sm) {
+                    font-size: 40px;
+                }
+            }
+        }
+        .development-lifecycle__inner {
+            padding: 0px 280px 0px 150px;
+            position: relative;
+            @include breakpoint(max-xxxl){
+                padding: 0px 70px 0px 100px;
+            }
+            @include breakpoint(max-xl) {
+                padding: 0px;
+            }
+            .development-lifecycle__body { 
+                padding: 58px 0px 145px 0px; 
+                @include breakpoint(max-xxxl) {
+                    padding: 50px 0px 120px 0px
+                }
+                @include breakpoint(max-sm) {
+                    padding: 50px 0px 55px 0px;
+                }
+                .development-lifecycle__item {
+                    @extend %flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include breakpoint(max-xl) {
+                        flex-direction: column;
+                    }
+                    .development-lifecycle__item__list {
+                        text-align: center;
+                        @include breakpoint(max-xl) {
+                            margin: 20px 0px;
+                        }
+                        &.item_bg {
+                            padding: 27px 0px;
+                            width: 215px;
+                            background: $white;
+                            text-align: center;
+                            border-radius: 16px;
+                            line-height: 27px;
+                            > span {
+                                color: $heading;
+                                font-weight: 600;
+                                font-family: $public-sans;
+                                font-size: 24px;
+                                display: inline-block; 
+                            }
+                        }
+                        span {
+                            font-size: 23px;
+                            font-weight: 600;
+                            color: #615CF6;
+                            font-family: $poppins;
+                        }
+                        p {
+                            color: #26252E;
+                            opacity: .7;
+                            font-family: $poppins;
+                        }
+                        
+                    }
+                }
+            }
+        } 
+    }
+}

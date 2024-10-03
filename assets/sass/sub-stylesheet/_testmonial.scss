@@ -1,0 +1,175 @@
+/* @@@@@@@@@@@@@  testmonial Section Start Here  @@@@@@@@@@@@@@ */
+.testmonial {
+    position: relative; 
+    .testmonial__area {
+        .testmonial__img {
+            position: absolute;
+            right: 0;
+            img {
+                height: 600px; 
+                @include breakpoint(max-sm){
+                    height: auto;
+                    width: 100%;
+                }   
+            }
+            @include breakpoint(max-xxl){
+                right: auto;
+                bottom: -57%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @include breakpoint(max-sm) {
+                top: 86%;
+                right: auto; 
+                bottom: unset;
+                left: unset;
+                transform: unset;
+            }
+            
+        }
+        .testmonial__wrapper {
+            .testmonial__inner {
+                .testmonial__title {
+                    p {
+                        color: $primary-color;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        text-decoration: underline;
+                        font-family: $poppins;
+                    }
+                    h2 {
+                        font-family: $public-sans;
+                        font-weight: 800;
+                        color: #16171A;
+                        font-size: 50px;
+                        margin: 12px 0px 8px;
+                        @include breakpoint(max-sm){
+                            font-size: 40px;
+                        }
+                    }
+                }
+                .testmonial__slider_inner {
+                    .testmonial__slider-content {
+                        p {
+                            font-size: 30px;
+                            font-family: $inter;
+                            font-weight: 500;
+                            border-bottom: 1px solid #18185e0d;
+                            padding-bottom: 25px;
+                            @include breakpoint(max-sm){
+                                font-size: 20px;
+                            }
+                        }
+                        .author { 
+                            padding: 34px 0px 30px;
+                            @include breakpoint(max-sm) {
+                                padding: 20px 0px 100px;
+                            }
+                            .autho__name {
+                                color: #222222;
+                                font-weight: 700;
+                                font-family: $inter;
+                            }
+                            .autho__title {
+                                font-size: 14px;
+                                padding-left: 10px;
+                                color: #696969;
+                                font-family: $inter;
+                            }
+                        }
+                    } 
+                    
+                    .swiper-button-prev {
+                        position: absolute;
+                        left: auto;
+                        top: 88%;
+                        width: 50px;
+                        height: 50px;
+                        background: #F1F1F1;
+                        line-height: 50px;
+                        border-radius: 100%;
+                        display: inline-block;
+                        text-align: center;
+                        transition: all .3s ease-in-out;
+                        right: 70px !important;
+                       
+                        &:hover {
+                            background-color: $primary-color;
+                            &::after {
+                                color: $white;
+                            }
+                        }
+                        &::after {
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            font-size: 20px;
+                            color: #08112D;
+                            transition: all .3s ease-in-out;
+                            content: '\f060';
+                        }
+                    }
+                    .swiper-rtl {
+                        .swiper-button-next,
+                        .swiper-button-prev {
+                            position: absolute;
+                            left: auto;
+                            top: 88%;
+                            width: 50px;
+                            height: 50px;
+                            background: $next_prev_btn;
+                            line-height: 50px;
+                            border-radius: 100%;
+                            display: inline-block;
+                            text-align: center;
+                            transition: all .3s ease-in-out;
+                            right: 70px !important;
+                        }
+                    }
+                    .swiper-button-next {
+                        position: absolute;
+                        left: auto;
+                        top: 88%;
+                        width: 50px;
+                        height: 50px;
+                        background: $next_prev_btn;
+                        line-height: 50px;
+                        border-radius: 100%;
+                        display: inline-block;
+                        text-align: center;
+                        transition: all .3s ease-in-out;
+                        right: 0px !important;
+                        &:hover {
+                            background-color: $primary-color;
+                            &::after {
+                                color: $white;
+                            }
+                        }
+                        &::after {
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            font-size: 20px;
+                            color: #08112D;
+                            transition: all .3s ease-in-out;
+                            content: '\f061';
+                        }
+                    }
+                    .swiper-button-next.swiper-button-disabled {
+                        opacity: .4;
+                    }
+                    .swiper-button-prev.swiper-button-disabled {
+                        opacity: .4;
+                    }                    
+                }
+            }
+            .content-height {
+                height: 850px;
+                @include breakpoint(max-sm) {
+                    height: auto;
+                    padding: 70px 0px 120px;
+                }
+            }
+        }
+    }
+}
+
+ 
